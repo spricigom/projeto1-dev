@@ -1,15 +1,9 @@
 <script setup>
-import { ref } from "vue";
+import { reactive, ref } from "vue";
 
-const nome = ref('');
-const email = ref('');
-const senha = ref('');
-const confirmarSenha = ref('');
-const nascimento = ref('');
-const endereco = ref('');
-const cidade = ref('');
-const hobbies = ref('');
-const biografia = ref('');
+const usuario = reactive({
+    nome: '';
+})
 
 const mostrarResultado = ref(false)
 
@@ -19,7 +13,21 @@ const mostrarResultado = ref(false)
     <h1>Projeto 1</h1>
     <div class="container">
         <div class="formulario">
-            <form @submit.prevent="mostrarResultado = !mostrarResultado"></form>
+            <form @submit.prevent="mostrarResultado = !mostrarResultado">
+                <div class="row">
+                    <label for="">Nome:</label>
+                    <input type="text" name="" id="">
+                </div>
+                <div class="row">
+                    <label for="">Email:</label>
+                    <input type="email" name="" id="">
+                </div>
+                <div class="row">
+                    <label for="">Senha:</label>
+                    <input type="password" name="" id="">
+                </div>
+            </form>
         </div>
+        <button type="submit">Mostrar</button>
     </div>
 </template>
