@@ -11,9 +11,15 @@ const cidade = ref('');
 const hobbies = ref('');
 const biografia = ref('');
 
+const mostrarResultado = ref(false)
+
 </script>
 
 <template>
-    <input type="text" v-model="nome" placeholder="Digite seu nome">
-    <p>Nome:</p>
+    <h1>Projeto 1</h1>
+    <div class="container">
+        <div class="formulario">
+            <form @submit.prevent="mostrarResultado = !mostrarResultado"></form>
+        </div>
+    </div>
 </template>
