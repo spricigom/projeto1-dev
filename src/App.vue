@@ -7,12 +7,20 @@ const usuario = reactive({
     idade: 0,
     senha: '',
     nascimento: '',
+    estado: ["AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"],
+
 })
 const endereco = reactive({
     CEP: '',
     rua: '',
     numero: '',
     bairro: '',
+})
+const diversos = reactive({
+    hobbies: '',
+    linguagem: '',
+    biografia: ''
+
 })
 const mostrarResultado = ref(false)
 
@@ -61,6 +69,25 @@ const mostrarResultado = ref(false)
                     <label for="">Bairro:</label>
                     <input type="text" v-model="endereco.bairro">
                 </div>
+                <div class="row">
+                    <label for="">Estado:</label>
+                    <select name="estados" id="estados" v-model.lazy="usuario.estado">
+                        <option value="" disabled selected> Selecione um estado</option>
+                        <option v-for="(item, index) in usuario.estado" :key="index">  {{item}}</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="">Hobbies</label>
+                    <input type="text" v-model="diversos.hobbies">
+                </div>
+                <div>
+                    <label for="">Linguagem de Programação</label>
+                    <input type="text" v-model="diversos.linguagem">
+                </div>
+                <div>
+                    <label for="">Biografia</label>
+                    <input type="text" v-model="diversos.biografia">
+                </div>
                 <button type="submit">Mostrar</button>
             </form>
         </div>
@@ -70,5 +97,10 @@ const mostrarResultado = ref(false)
         <p>Nome: {{ usuario.nome }}</p>
         <p>Email: {{ usuario.email }}</p>
         <p>Senha: {{ usuario.senha }}</p>
+        <p>Data de nascimento: {{usuario.nascimento}}</p>
+        <p>CEP: {{ endereco.CEP }}</p>
+        <p>Rua: {{ endereco.rua }}</p>
+        <p>Número: {{ endereco.numero }}</p>
+        <p>Bairro: {{endereco.bairro}}</p>
     </div>
 </template>
