@@ -25,12 +25,14 @@ const diversos = reactive({
 const mostrarResultado = ref(false)
 
 //if (usuario.idade <= 18 && usuario.idade >= 60) {}
+''</script>
 
-</script>
+
 
 <template>
-    <h1>Projeto 1</h1>
+
     <div class="container">
+        <h1>Projeto 1</h1>
         <div class="formulario">
             <form @submit.prevent="mostrarResultado = !mostrarResultado">
                 <div class="row">
@@ -62,6 +64,7 @@ const mostrarResultado = ref(false)
                     <input type="text" v-model="endereco.rua">
                 </div>
                 <div class="row">
+                    
                     <label for="">Número:</label>
                     <input type="number" v-model="endereco.numero">
                 </div>
@@ -76,15 +79,15 @@ const mostrarResultado = ref(false)
                         <option v-for="(item, index) in usuario.estado" :key="index">  {{item}}</option>
                     </select>
                 </div>
-                <div>
+                <div class="row">
                     <label for="">Hobbies</label>
                     <input type="text" v-model="diversos.hobbies">
                 </div>
-                <div>
+                <div class="row">
                     <label for="">Linguagem de Programação</label>
                     <input type="text" v-model="diversos.linguagem">
                 </div>
-                <div>
+                <div class="row">
                     <label for="">Biografia</label>
                     <input type="text" v-model="diversos.biografia">
                 </div>
