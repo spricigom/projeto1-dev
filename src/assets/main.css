@@ -1,5 +1,5 @@
 .fundo{
-    background-color: wheat;
+    background-color: rgb(158, 141, 219);
 }
 .formulario{
     margin-left: 20%;
@@ -15,8 +15,28 @@
     background-color: white;
     margin-top: 10px;
     margin-bottom: 10px;
+    border-radius: 20px;
 }
 
+.card{
+    margin-top: 10vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    border-radius: 20px;
+}
+
+.card-header{
+    height: 7vh;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+input{
+    height: 3vh;
+    width: 94vh;
+    border-radius: 20px;
+    
+}
 label{
     height: 10vh;
 }

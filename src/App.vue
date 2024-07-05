@@ -76,55 +76,155 @@ function enviarDados() {
 
 
 <template>
+
+
+
+
+
     <div class="fundo">
+
+
+
 
         <div class="container">
             <h1>Projeto 1</h1>
             <div class="formulario">
-                <form @submit.prevent="enviarDados">
-                    <div class="row">
-                        <label for="">Nome:</label>
-                        <input type="text" v-model="usuario.nome" placeholder="Digite seu nome.">
+  <form @submit.prevent="enviarDados">
+
+
+
+
+
+
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Nome:</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <input type="text" v-model="usuario.nome" placeholder="Digite seu nome.">
+                            </blockquote>
+                        </div>
                     </div>
-                    <div class="row">
-                        <label for="">Email:</label>
-                        <input type="email" v-model="usuario.email" placeholder="Digite seu email.">
+
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Idade:</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <input type="number" v-model="usuario.idade">
+                            </blockquote>
+                        </div>
                     </div>
-                    <div class="row">
-                        <label for="">Senha:</label>
-                        <input type="password" v-model="usuario.senha" placeholder="Digite sua senha. Ex:Senha123!">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Email:</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <input type="email" v-model="usuario.email" placeholder="Digite seu email.">
+                            </blockquote>
+                        </div>
                     </div>
-                    <div class="row">
-                        <label for="">Confirmação de senha:</label>
-                        <input type="password" v-model="usuario.confirmSenha" placeholder="Digite sua senha novamente.">
+
+
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Senha:</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <input type="password" v-model="usuario.senha" placeholder="Digite sua senha. Ex:Senha123!">
+                            </blockquote>
+                        </div>
                     </div>
-                    <div class="row">
-                        <label for="">Data de nascimento:</label>
-                        <input type="date" v-model="usuario.nascimento" placeholder="Digite sua data de nascimento.">
+<div class="card">
+                        <div class="card-header">
+                            <label for=""> COnfirmação de senha:</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <input type="password" v-model="usuario.confirmSenha" placeholder="Digite sua senha novamente.">
+                            </blockquote>
+                        </div>
                     </div>
-                    <div class="row">
-                        <label for="">Endereço:</label>
-                        <input type="text" v-model="usuario.endereco" placeholder="Digite seu endereço.">
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Data de nascimento:</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <input type="date" v-model="usuario.nascimento" placeholder="Digite sua data de nascimento.">
+                            </blockquote>
+                        </div>
                     </div>
-                    <div class="row">
-                        <label for=""> Selecione seu estado:</label>
+                      <div class="card">
+                        <div class="card-header">
+                            <label for="">Endereço</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <input type="text" v-model="usuario.endereco" placeholder="Digite seu endereço.">
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for=""> Selecione seu estado:</label>
                         <select name="estados" id="estados" v-model.lazy="usuario.estado">
                             <option v-for="(item, index) in estados" :value="item" :key="index"> {{ item }}</option>
                         </select>
+                        </div>
+                        <div class="card-body">
+
+                        </div>
                     </div>
-                    <div class="row">
-                        <label for="">Hobbies:</label>
-                        <input type="text" v-model="diversos.hobbies" placeholder="Digite seus hobbies.">
+
+                    
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Hobbies</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <input type="text" v-model="diversos.hobbies" placeholder="Digite seus hobbies.">
+                            </blockquote>
+                        </div>
                     </div>
-                    <div class="row">
-                        <label for="">Linguagem de Programação:</label>
-                        <input type="text" v-model="diversos.linguagem"
-                            placeholder="Digite as linguagens de programação que utiliza.">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Linguagem de Programação</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <input type="text" v-model="diversos.linguagem"  placeholder="Digite as linguagens de programação que utiliza.">
+                            </blockquote>
+                        </div>
                     </div>
-                    <div class="row">
-                        <label for="">Biografia:</label>
-                        <input type="text" v-model="diversos.biografia" placeholder="Digite sua bigrafia.">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Biografia</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <input type="text" v-model="diversos.biografia" placeholder="Digite sua bigrafia.">
+                            </blockquote>
+                        </div>
                     </div>
+
+
+                     
                     <button type="submit" id="botao">Mostrar</button>
                 </form>
             </div>
