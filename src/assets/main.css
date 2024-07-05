@@ -7,9 +7,11 @@
 }
 
 #botao{
-    border-radius: 20px;
-    margin-top: 30px;
+    border-radius: 15px;
     margin-bottom: 30px;
+    width: 12vh;
+    background-color: purple;
+    color: white;
 }
 .row{
     background-color: white;
@@ -33,13 +35,14 @@
 
 input{
     height: 3vh;
-    width: 94vh;
+    width: 77vh;
     border-radius: 20px;
-    
+    margin-bottom: 10vh;
+    font-size: .5rem;
 }
 label{
-    height: 10vh;
+    font-size: 1.3rem;
 }
-input{
-    margin-bottom: 10vh;
+::placeholder{
+    font-size: .9rem;
 }

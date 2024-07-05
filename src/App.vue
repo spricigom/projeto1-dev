@@ -70,33 +70,30 @@ function enviarDados() {
     if (!error) {
         mostrarResultado.value = !mostrarResultado.value
     }
+    
 }
 </script>
 
 
 
 <template>
-
-
-
-
-
     <div class="fundo">
 
 
 
 
         <div class="container">
-            <h1>Projeto 1</h1>
+           
+
+            <div class="card" id="titulo">
+                        <div class="card-header">
+                             <h1>Projeto 1</h1>
+                        </div>
+            </div>
+
+
             <div class="formulario">
-  <form @submit.prevent="enviarDados">
-
-
-
-
-
-
-
+                <form @submit.prevent="enviarDados">
 
                     <div class="card">
                         <div class="card-header">
@@ -111,16 +108,7 @@ function enviarDados() {
 
 
 
-                    <div class="card">
-                        <div class="card-header">
-                            <label for="">Idade:</label>
-                        </div>
-                        <div class="card-body">
-                            <blockquote class="blockquote mb-0">
-                                <input type="number" v-model="usuario.idade">
-                            </blockquote>
-                        </div>
-                    </div>
+                   
 
                     <div class="card">
                         <div class="card-header">
@@ -145,13 +133,14 @@ function enviarDados() {
                             </blockquote>
                         </div>
                     </div>
-<div class="card">
+                    <div class="card">
                         <div class="card-header">
-                            <label for=""> COnfirmação de senha:</label>
+                            <label for=""> Confirmação de senha:</label>
                         </div>
                         <div class="card-body">
                             <blockquote class="blockquote mb-0">
-                                <input type="password" v-model="usuario.confirmSenha" placeholder="Digite sua senha novamente.">
+                                <input type="password" v-model="usuario.confirmSenha"
+                                    placeholder="Digite sua senha novamente.">
                             </blockquote>
                         </div>
                     </div>
@@ -161,11 +150,12 @@ function enviarDados() {
                         </div>
                         <div class="card-body">
                             <blockquote class="blockquote mb-0">
-                                <input type="date" v-model="usuario.nascimento" placeholder="Digite sua data de nascimento.">
+                                <input type="date" v-model="usuario.nascimento"
+                                    placeholder="Digite sua data de nascimento.">
                             </blockquote>
                         </div>
                     </div>
-                      <div class="card">
+                    <div class="card">
                         <div class="card-header">
                             <label for="">Endereço</label>
                         </div>
@@ -179,16 +169,15 @@ function enviarDados() {
                     <div class="card">
                         <div class="card-header">
                             <label for=""> Selecione seu estado:</label>
-                        <select name="estados" id="estados" v-model.lazy="usuario.estado">
-                            <option v-for="(item, index) in estados" :value="item" :key="index"> {{ item }}</option>
-                        </select>
-                        </div>
-                        <div class="card-body">
+                            <select name="estados" id="estados" v-model.lazy="usuario.estado">
+                                <option v-for="(item, index) in estados" :value="item" :key="index"> {{ item }}</option>
+                            </select>
+                       
 
                         </div>
                     </div>
 
-                    
+
 
                     <div class="card">
                         <div class="card-header">
@@ -207,7 +196,8 @@ function enviarDados() {
                         </div>
                         <div class="card-body">
                             <blockquote class="blockquote mb-0">
-                                <input type="text" v-model="diversos.linguagem"  placeholder="Digite as linguagens de programação que utiliza.">
+                                <input type="text" v-model="diversos.linguagem"
+                                    placeholder="Digite as linguagens de programação que utiliza.">
                             </blockquote>
                         </div>
                     </div>
@@ -222,10 +212,7 @@ function enviarDados() {
                             </blockquote>
                         </div>
                     </div>
-
-
-                     
-                    <button type="submit" id="botao">Mostrar</button>
+                    <button type="submit" id="botao" class="btn " >Mostrar</button>
                 </form>
             </div>
         </div>
