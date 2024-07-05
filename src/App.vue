@@ -30,12 +30,16 @@ const mostrarResultado = ref(false)
 
 
 <template>
+<div class="fundo">
+
+    
+
 
     <div class="container">
         <h1>Projeto 1</h1>
         <div class="formulario">
             <form @submit.prevent="mostrarResultado = !mostrarResultado">
-                <div class="row">
+                <div class="row" >
                     <label for="">Nome:</label>
                     <input type="text" v-model="usuario.nome">
                 </div>
@@ -91,10 +95,11 @@ const mostrarResultado = ref(false)
                     <label for="">Biografia</label>
                     <input type="text" v-model="diversos.biografia">
                 </div>
-                <button type="submit">Mostrar</button>
+                <button type="submit" id="botao">Mostrar</button>
             </form>
         </div>
     </div>
+</div>
     <div v-if="mostrarResultado">
         <h2>Resultado</h2>
         <p>Nome: {{ usuario.nome }}</p>
