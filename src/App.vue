@@ -70,29 +70,34 @@ function enviarDados() {
     if (!error) {
         mostrarResultado.value = !mostrarResultado.value
     }
-    
+
 }
 </script>
 
 
 
-<template>
+<template >
     <div class="fundo">
 
 
 
 
         <div class="container">
-           
-
-            <div class="card" id="titulo">
-                        <div class="card-header">
-                             <h1>Projeto 1</h1>
-                        </div>
-            </div>
-
 
             <div class="formulario">
+                
+                <div class="card" id="titulo">
+                    
+                    <div class="card-header">
+                        <h1>Formulario</h1>
+                    </div>
+                    <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>Responda as perguntas a seguir:</p>
+                            </blockquote>
+                        </div>
+                </div>
+
                 <form @submit.prevent="enviarDados">
 
                     <div class="card">
@@ -108,7 +113,7 @@ function enviarDados() {
 
 
 
-                   
+
 
                     <div class="card">
                         <div class="card-header">
@@ -129,7 +134,8 @@ function enviarDados() {
                         </div>
                         <div class="card-body">
                             <blockquote class="blockquote mb-0">
-                                <input type="password" v-model="usuario.senha" placeholder="Digite sua senha. Ex:Senha123!">
+                                <input type="password" v-model="usuario.senha"
+                                    placeholder="Digite sua senha. Ex:Senha123!">
                             </blockquote>
                         </div>
                     </div>
@@ -172,7 +178,7 @@ function enviarDados() {
                             <select name="estados" id="estados" v-model.lazy="usuario.estado">
                                 <option v-for="(item, index) in estados" :value="item" :key="index"> {{ item }}</option>
                             </select>
-                       
+
 
                         </div>
                     </div>
@@ -212,21 +218,123 @@ function enviarDados() {
                             </blockquote>
                         </div>
                     </div>
-                    <button type="submit" id="botao" class="btn " >Mostrar</button>
+                    <button type="submit" id="botao" class="btn ">Mostrar</button>
                 </form>
             </div>
         </div>
+   
+
+    <div v-if="mostrarResultado" class="resultado">
+      
+
+        <div class="card">
+                        <div class="card-header">
+                            <h2>Resultado</h2>
+                           
+
+
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Nome:</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{ usuario.nome }}</p>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Email:</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{ usuario.email }}</p>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Senha:</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{ usuario.senha }}</p>                            
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Data de nascimento:</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{ usuario.nascimento }}</p>                            
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Endereço:</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{ usuario.endereco }}</p>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                  
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Hobbies:</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{ diversos.hobbies }}</p>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Linguagem de programação:</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{ diversos.linguagem }}</p>                            
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <label for="">Biografia:</label>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{ diversos.biografia }}</p>
+                            </blockquote>
+                        </div>
+                    </div>
+
+
+        
+
+       
+        
+       
+       
+       
+        
     </div>
-    <div v-if="mostrarResultado">
-        <h2>Resultado</h2>
-        <p>Nome: {{ usuario.nome }}</p>
-        <p>Email: {{ usuario.email }}</p>
-        <p>Senha: {{ usuario.senha }}</p>
-        <p>Data de nascimento: {{ usuario.nascimento }}</p>
-        <p>Endereço: {{ usuario.endereco }}</p>
-        <p>Estado: {{ estados }}</p>
-        <p>Hobbies: {{ diversos.hobbies }}</p>
-        <p>Linguagem de programação: {{ diversos.linguagem }}</p>
-        <p>Biografia: {{ diversos.biografia }}</p>
-    </div>
+     </div>
 </template>

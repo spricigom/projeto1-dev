@@ -1,9 +1,11 @@
+
 .fundo{
-    background-color: rgb(158, 141, 219);
+    background-color: rgb(218, 205, 216);
 }
 .formulario{
     margin-left: 20%;
     margin-right: 20%;
+    margin-top: -3vh;
 }
 
 #botao{
@@ -21,24 +23,26 @@
 }
 
 .card{
-    margin-top: 10vh;
     margin-top: 3vh;
     margin-bottom: 3vh;
     border-radius: 20px;
 }
 
 .card-header{
-    height: 7vh;
+    height: 10vh;
     margin-top: 10px;
-    margin-bottom: 0;
+    
+}
+
+.card-body{
+    height: 10vh;
 }
 
 input{
-    height: 3vh;
+    height: 3.9vh;
     width: 77vh;
     border-radius: 20px;
     margin-bottom: 10vh;
-    font-size: .5rem;
 }
 label{
     font-size: 1.3rem;
@@ -46,3 +50,11 @@ label{
 ::placeholder{
     font-size: .9rem;
 }
+#titulo{
+    height: 20vh;
+}
+.resultado{
+    margin-right: 26%;
+    margin-left: 26%;
+}
+
